@@ -1,1 +1,47 @@
+Mathe-Repetitorium
 
+Übungsaufgabe 5:
+Zeigen Sie, dass Z2(ganze Zahlen im Binärssystem) isomorph ist zu Z/mZ ist(mod2).
+
+
+- was heißt isomorph?
+Isomorph beschreibt eine Beziehung zwischen zwei Objekten/Strukturen.
+Wenn Objekte/Strukturen isomorph zueinander sind heißt es dass sie trotz unterschiedlicher Bezeichnung gleich sind
+
+Mein Auftrag ich muss zeigen dass Elemente der Mengen Z2 und Z/mZ, diesselben sind.
+Und dass diese in beide Richtungen abgebildet werden können mittels einen Graphen.
+
+Mengenbeschreibung Z2:={0,1}
+Mengenbeschreibung Z/mZ:={[0],[1],[2].....[m-1]} 
+weil durch 2(m) geteilt wird, existiert auch nur Restklasse [0],[1]
+
+Stand jetzt ist ich kann schon sagen dass die Elemente der beiden Mengen diesselben sind
+Jetzt müssen allerdings auch noch die Operationen wie z.B die Addition Elemente hervorbringen die auch 
+in den Mengen vorhanden sind.
+
+(+) Z2  
+    0+0=0
+    0+1=1
+    1+0=1
+    1+1=0 
+(+)Z/mZ
+    [0]+[0]=[0]
+    [0]+[1]=[1]
+    [1]+[0]=[1]
+    [1]+[1]=[2] --> 2/2-->[0]
+
+Auch Rechenoperationen spechen diesselben Elemente der Mengen an.
+Zum Schluss muss ich diese Mengen aufeinander abbilden können fZ2-->Z/mZ
+Bijektivität ist hier das Stichwort 
+
+Injektiv: Jedes Element aus Menge Z2 ist höchstens einem Element aus Menge Z/mZ zugewiesen.
+          f(0)=[0]
+          f(1)=[1]
+Injektivität erfüllt;
+
+Surjektivität: jedes Element aus Menge Z/mZ hat mindestens ein Urelement aus Menge Z2.
+          s.oben-->Injektiv
+Surjektivität erfüllt;
+
+Da die Injektivität als auch die Surjektivität bestimmt handelt es sich um eine Bijektive Mengneabbildung und somit 
+ist es bewiesen, dass die Mengen Z2 und Z/mZ isomoph sind, anders ausgedrückt aber selbe Menge. qed.
