@@ -1,0 +1,33 @@
+import random
+
+def simulate_sorting():
+    # generiere eine zufällige Liste mit 25 Einträgen, die die Werte 0-100 annehmen können
+    random_list = [random.randint(0,100) for _ in range(25)]
+    
+    # sortiere die Liste von klein nach groß
+    sorted_list=sorted(random_list)
+    return sorted_list
+#Ausgabe dieser Liste
+print (simulate_sorting())
+
+def generate_statistical_realization(num_simulations):
+    occurences={}
+    for _ in range(num_simulations):
+        sorted_list =tuple(simulate_sorting())
+
+        if sorted_list in occurences:
+            occurences[sorted_list]+=1
+        else:
+            occurences[sorted_list]=1
+            total_occurences=sum(occurences.values())
+            prohabilities={k:v/total_occurences for k, v in occurences.items() }
+            return prohabilities
+print (generate_statistical_realization)
+
+if __name__ == "__main__":
+    num_simulations = 10000
+    probabilities = generate_statistical_realization(num_simulations)
+
+    # Ausgabe der statistischen Realisierung
+    for sorted_list, probability in probabilities.items():
+        print(f"Sorted List: {sorted_list}, Probability: {probability}")
