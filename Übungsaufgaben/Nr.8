@@ -1,0 +1,35 @@
+Zeigen Sie, dass die Matrixmultiplikation homogen ist, d. h. dass gilt A(k⃗x) = (kA)⃗x = k(A⃗x) für
+A ∈ Km × Kn mit A : Kn → Km, ⃗x ∈ Kn und k ∈ K.
+
+Eine Matrik lässt sich nur mit einem Vektor multiplizieren, 
+wenn die Spaltenanzahl der Matrix mit der Zeilenanzahl des Vektors übereinstimmt
+Habe ich also eine 3x3 Matrix muss der Vektor dreidimensional sein also einen z-Wert haben.
+A ist meine Matrix, ⃗x ist mein Vektor und k meine Determinante
+Gesetz der Kommutativgesetz: wenn A*(k * ⃗x)= (k*A)⃗x
+
+gegeben:
+A =     1 2 3    k=3    x=  2
+        4 5 6               2
+        7 8 9               2
+
+Berechnung nach A(k⃗x):
+
+k*x--> 3*2 ---> neu x= 6
+       3*2             6
+       3*2             6 
+
+A*neu x --> 1 2 3      6    =  EndMatrix-->   6 12 18
+            4 5 6   *  6    =                  24 30 36
+            7 8 9      6    =                  42 48 54
+
+Berechnung nach (kA)⃗x:
+
+k*A-->      1 2 3  =  ZwischenMatrix-->   3  6  9
+       3 *  4 5 6  =                     12 15 18
+            7 8 9  =                     21 24 27
+
+ZwischenMatrix * ⃗x  -->  3  6  9      2   =  EndMatrix-->   6 12 18     
+                         12 15 18   *  2   =                24 30 36 
+                         21 24 27      2   =                42 48 54
+
+Fazit: Es ist egal wir rum ich sie miteinadner multipliziere, die EndMatrix sieht immer gleich aus. Vorraussetzung zum Multiplzieren wie oben beschrieben. 
