@@ -1,0 +1,25 @@
+from collections import deque
+import random
+
+def main():
+    # Erstellen einer leeren Deque mit einer festen Länge von 50 Indizes
+    warteschlange = deque(maxlen=50)
+
+    # Füllen der Deque mit zufälligen Zahlen zwischen 1 und 1000
+    for _ in range(50):
+        warteschlange.append(random.randint(1, 1000))
+
+    # Ausgabe der Deque vor den Iterationsschritten
+    print("Ausgangs-Deque:")
+    print(list(warteschlange))
+
+    # 25 numerische Iterationsschritte (Schieberegister nach links)
+    for _ in range(25):
+        warteschlange.append(warteschlange.popleft())
+
+    # Ausgabe der Deque nach den Iterationsschritten
+    print("\nDeque nach 25 numerischen Iterationsschritten (Schieberegister nach links):")
+    print(list(warteschlange))
+
+if __name__ == "__main__":
+    main()
