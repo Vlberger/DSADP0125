@@ -1,25 +1,31 @@
-from collections import deque
 import random
 
-def main():
-    # Erstellen einer leeren Deque mit einer festen Länge von 50 Indizes
-    warteschlange = deque(maxlen=50)
+def enq(array,element):
+    array.append(element)
 
-    # Füllen der Deque mit zufälligen Zahlen zwischen 1 und 1000
-    for _ in range(50):
-        warteschlange.append(random.randint(1, 1000))
+def deq(array,element):
+    array.remove(element)
 
-    # Ausgabe der Deque vor den Iterationsschritten
-    print("Ausgangs-Deque:")
-    print(list(warteschlange))
+sreg=['']*50
+N=50
 
-    # 25 numerische Iterationsschritte (Schieberegister nach links)
-    for _ in range(25):
-        warteschlange.append(warteschlange.popleft())
+for i in range (0,N):
+    sreg[i]=random.randint(1,1000)
+    
+print(sreg)
 
-    # Ausgabe der Deque nach den Iterationsschritten
-    print("\nDeque nach 25 numerischen Iterationsschritten (Schieberegister nach links):")
-    print(list(warteschlange))
+for i in range(0,25):
+    enq(sreg,'0')
+    deq(sreg,sreg[0])
+    print(sreg)
 
-if __name__ == "__main__":
-    main()
+print("Rechtsverschiebung")
+for i in range (0,N):
+    sreg[i]=random.randint(1,1000)
+
+print(sreg)
+
+for i in range(0,25):
+    sreg[49-1]=sreg[49-i-1]
+    sreg[i]='0'
+    print(sreg)
